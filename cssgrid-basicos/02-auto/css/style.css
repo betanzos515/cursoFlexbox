@@ -5,6 +5,12 @@ h2 {
 .servicios {
     border: 3px solid black;
     height: 300px;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    /* Grid Auto Flow nos ayuda para re posicionar los elementos cuando un elemento se mueve de su lugar por medio de la propiedad grid-colimn, auto-flow nos ayuda a reposicionar ya sea en columnas o filas dependiendo la distribución existe otro conocido como dense esté toma el algoritmo de css-grid y posciciona los valores de la mejor forma posible 
+    */
+    grid-auto-flow: column;
 }
 
 .servicio {
@@ -12,13 +18,20 @@ h2 {
     text-align: center;
 }
 
-.servicio-1 {
+.servicio-1,
+.servicio-4 {
     background-color: darkviolet;
 }
 
-.servicio-2 {
+.servicio-2{
+    grid-column:1/2;
+}
+
+.servicio-2,
+.servicio-5 {
     background-color: limegreen;
 }
-.servicio-3 {
+.servicio-3,
+.servicio-6 {
     background-color: teal;
 }
