@@ -6,8 +6,28 @@ h2 {
     border: 3px solid black;
     height: 300px;
     display:grid;
-}
+    grid-template-columns:repeat(3,3fr);
+    grid-template-columns: repeat(5, 200px);
+    /* Esta propiedad nos crea un grid del tamaño que se le pase como parametro despues del auto-fill, en este caso le asignamos 200 la problematica de esté grid es que al ser fijas las medidas, en este caso al tener una pantalla de 800px solo será capaz de crear una columna de 500 y el demás espacio se quedará en blanco teniendo como una especia de Margen*/
+    grid-template-columns: repeat(auto-fill, 500px );
 
+    /* La siguiente sentencia podrá decirse que es la misma que la de arriba solo que aquí si se establece una medida minima que es la que está dentro del minmax, en este caso la medida minima es de 200px y cuando el elemento sea muy pequeño se extenderá a una fraccion, el algoritmo checa si hay espacio para un elemento de 200 pixeles genera otra columna en caso contrario se adapta */
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+
+    /* En el caso de autofit su principal funcion en no dejar espacios en blanco en caso de que los elementos declarados en el minmax sean muy pequeñoa y sobre mucho espacio en nuestro componente */
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+
+
+
+
+}
+/* @media screen and (min-width: 768px){
+    .servicios{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+} */
 .servicio {
     color: white;
     text-align: center;
