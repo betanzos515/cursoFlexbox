@@ -63,5 +63,16 @@ h3{
 
 .servicios{
     margin-top:3rem;
+    text-align:center;
 }
+
+.servicios::after{
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    background:var(--primario);
+    position: absolute;
+}
+
 
