@@ -98,6 +98,7 @@ blockquote {
         grid-template-columns: minmax(100px,max-content) auto minmax(100px,max-content) ;
         gap: 1.5rem;
     }
+    
     .titulo{
         grid-column: 1 / 4;
     }
@@ -123,8 +124,9 @@ blockquote {
         max-width: 1200px;
         margin: 0 auto;
     }
+
     .footer .contenedor{
         display: grid;
         grid-template-columns: repeat(4,1fr);
     }
-}
+}   
