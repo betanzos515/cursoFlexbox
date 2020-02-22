@@ -82,13 +82,25 @@ form input[type='text'] {
    flex:1;
    border:none;
    border-radius: 10px;
-   padding-left: 1rem;
+   padding-left: 5rem;
+   background-image: url(../img/lupa.png);
+   background-repeat: no-repeat;
+   background-position: calc(1% + 1rem) calc(1% + .8rem) ;
+   font-size:1.6rem;
 }
 
 
 
 form input[type='submit'] {
     position: absolute;
-    height: 4rem;
-    right: 0%;
+    right: 1rem;
+    top: .6rem;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 10px;
+    background: var(--primario);
+    color: var(--claro);
+    text-transform: uppercase;
+    cursor: pointer;
 }
+
