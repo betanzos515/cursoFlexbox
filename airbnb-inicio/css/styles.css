@@ -82,6 +82,7 @@ form input[type='text'] {
    flex:1;
    border:none;
    border-radius: 10px;
+   padding-left: 1rem;
 }
 
 
