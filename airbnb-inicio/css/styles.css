@@ -4,6 +4,12 @@
     --primario :#de595e;
     --obscuro: #484848;
     --claro: #ffffff;
+
+    --hospedaje: #275154;
+    --concierto: #da595e;
+    --clase: #598dda;
+    --paseo:#940ad4;
+
 }
 
 html{
@@ -12,6 +18,10 @@ html{
 
 body{
     font-family: var(--fuentePrincipal);
+}
+
+img{
+    max-width: 100%;
 }
 
 h1{
@@ -25,6 +35,40 @@ h2{
 
 h3{
     font-size: 1.8rem;
+}
+
+.boton{
+    background: var(--claro);
+    display: block;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: var(--obscuro);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    -webkit-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    transition: all 0.3s ease-in-out;
+}
+.boton:hover{
+    background: var(--primario);
+    color: var(--claro);
+}
+
+/* clase de colores */
+.hospedaje{
+    color: var(--hospedaje);
+}
+.concierto{
+    color: var(--concierto);
+}
+.clase{
+    color: var(--clase);
+}
+.paseo{
+    color: var(--paseo);
 }
 
 /* Interface */
@@ -103,4 +147,92 @@ form input[type='submit'] {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+/* Main */
+ .contenedor-cards{
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+     column-gap: .5rem;
+ }
+
+.card img{
+    width: 100%;
+}
+
+.info .categoria{
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.info .titulo{
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin:0;
+}
+
+.info .precio{
+    color: var(--obscuro);
+    font-size: .9rem;
+}
+
+/* Viaje Plus */
+.premium{
+    background: url(../img/hospedaje-pro.jpg);
+    background-repeat: no-repeat;
+    height: 30rem;
+}
+
+/* Media queries */
+
+.premium .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.premium .info h3{
+    text-align: center;
+    color: var(--claro);
+    font-size:2.2rem;
+}
+
+/* Destinos */
+
+.destinos .contenedor-cards{
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+}
+
+.destinos .card{
+    position: relative;
+}
+
+.destinos  .info{
+    position: absolute;
+    bottom:1rem;
+    left:1rem;
+    color: var(--claro);
+}
+
+.destinos .titulo{
+    font-size: 2rem;
+}
+
+@media screen and (min-width:768px){
+    .premium{
+        grid-template-columns: auto 30%;
+    }
+    .premium .info{
+        grid-column: 2/3;
+    }
+
+    .premium .info h3{
+        text-align: right;
+        color: var(--obscuro);
+    }
+}
+
+
 
