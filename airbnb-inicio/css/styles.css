@@ -40,7 +40,7 @@ h3{
 .boton{
     background: var(--claro);
     display: block;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     text-align: center;
     color: var(--obscuro);
     text-decoration: none;
@@ -77,9 +77,29 @@ h3{
     margin: 0 auto;
 }
 
+.btn-flotante{
+    position:fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: var(--claro);
+    padding: .5rem 2rem;
+    text-decoration:none;
+    -webkit-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 25px -10px rgba(0,0,0,0.75);
+    color:var(--obscuro);
+    transition: all .5s ease-in-out;
+}
+
+.btn-flotante.activo,
+.btn-flotante:hover{
+    background: var(--primario);
+    color: var(--claro);
+}
+
 .hero{
     height: 100vh;
-    background: url(../img/arriba.jpg);
+    background-image: url(../img/arriba.jpg);
     background-size: cover;
     display: grid;
     grid-template-rows: 1fr 2fr;
@@ -219,6 +239,77 @@ form input[type='submit'] {
 .destinos .titulo{
     font-size: 2rem;
 }
+
+/* Footer */
+
+.footer{
+    position:fixed;
+    bottom: -100%;
+    width: 100%;
+    background: var(--claro);
+    -webkit-box-shadow: 0px -7px 15px 3px rgba(140,140,140,0.8); 
+    box-shadow: 0px -7px 15px 3px rgba(140,140,140,0.8);
+    transition: all .3s ease-in-out;
+
+}
+
+.footer.activo{
+    bottom:0;
+}
+.nav-footer{
+    padding:1rem;
+}
+.nav-footer h3{
+    font-size: 1.3rem;
+}
+.nav-footer a{
+    display: block;
+    margin-bottom:.5rem;
+    text-decoration:none;
+    color: var(--obscur)
+}
+
+.nav-footer a:last-of-type{
+    margin:0;
+}
+
+.sociales ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1 0 auto;
+    list-style: none;
+}
+
+.sociales ul li{
+    margin-right: 1rem;
+}
+
+.sociales ul li a{
+    text-decoration:none;
+}
+
+.sociales ul li a::before{
+    font-family: "Font Awesome 5 Brands";
+    color: var(--obscuro);
+    font-size:1.8rem;
+}
+
+.sociales ul li a[href*="facebook.com"]::before{
+    content:"\f39e";
+}
+.sociales ul li a[href*="twitter.com"]::before{
+    content:"\f099";
+}
+.sociales ul li a[href*="instagram.com"]::before{
+    content:"\f16d";
+}
+.sociales ul li a span{
+    display: none;
+}
+
+
+
 
 @media screen and (min-width:768px){
     .premium{
