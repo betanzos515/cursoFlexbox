@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     /* Creamor las variables para manejar el tiempo */
     let i = 0;
     let tiempo = 0;
-    let imagenes = ['arriba.jpg','arriba.jpg'];
+    let imagenes = ['arriba.jpg','arriba2.jpg'];
     setInterval(()=>{
         tiempo += 1;
         console.log(tiempo);
@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(tiempo > 45){
             tiempo = 0;
             imagenHero.style.backgroundImage = `url(img/${imagenes[i]})`;
-            console.log(i);
-
-
             if(i === imagenes.length - 1){
                 i = 0;
             }
